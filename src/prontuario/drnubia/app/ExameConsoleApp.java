@@ -1,17 +1,15 @@
 package prontuario.drnubia.app;
 
-import prontuario.drnubia.dao.ExameDAO;
-import prontuario.drnubia.dao.ExameDAOImpl;
-import prontuario.drnubia.dao.PacienteDAO;
-import prontuario.drnubia.dao.PacienteDAOImpl;
-import prontuario.drnubia.database.DatabaseConnectionMySQL;
-import prontuario.drnubia.model.Exame;
-import prontuario.drnubia.model.Paciente;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
+
+import prontuario.drnubia.dao.ExameDAO;
+import prontuario.drnubia.dao.PacienteDAO;
+import prontuario.drnubia.database.DatabaseConnectionMySQL;
+import prontuario.drnubia.model.Exame;
+import prontuario.drnubia.model.Paciente;
 
 public class ExameConsoleApp {
 
@@ -20,8 +18,8 @@ public class ExameConsoleApp {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
     public static void executar(Scanner scanner) {
-        exameDAO = new ExameDAOImpl(new DatabaseConnectionMySQL());
-        pacienteDAO = new PacienteDAOImpl(new DatabaseConnectionMySQL());
+        exameDAO = new ExameDAO(new DatabaseConnectionMySQL());
+        pacienteDAO = new PacienteDAO(new DatabaseConnectionMySQL());
 
         boolean running = true;
         while (running) {

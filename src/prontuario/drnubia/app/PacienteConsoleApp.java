@@ -1,16 +1,15 @@
 package prontuario.drnubia.app;
 
-import prontuario.drnubia.dao.PacienteDAO;
-import prontuario.drnubia.dao.PacienteDAOImpl;
-import prontuario.drnubia.database.DatabaseConnectionMySQL;
-import prontuario.drnubia.model.Paciente;
-
 import java.util.List;
 import java.util.Scanner;
 
+import prontuario.drnubia.dao.PacienteDAO;
+import prontuario.drnubia.database.DatabaseConnectionMySQL;
+import prontuario.drnubia.model.Paciente;
+
 public class PacienteConsoleApp {
 
-    private static PacienteDAO pacienteDAO = new PacienteDAOImpl(new DatabaseConnectionMySQL());
+    private static PacienteDAO pacienteDAO = new PacienteDAO(new DatabaseConnectionMySQL());
 
     public static void executar(Scanner scanner) {
         boolean running = true;
