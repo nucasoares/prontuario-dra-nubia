@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import prontuario.drnubia.dao.PacienteDAO;
 import prontuario.drnubia.database.DatabaseConnectionMySQL;
+import prontuario.drnubia.exception.PacienteJaCadastradoException;
 import prontuario.drnubia.model.Paciente;
 
 public class PacienteConsoleApp {
@@ -54,7 +55,8 @@ public class PacienteConsoleApp {
             System.out.println("Nenhum paciente cadastrado.");
         } else {
             for (Paciente p : lista) {
-                System.out.printf("ID: %d | Nome: %s | CPF: %s%n", p.getId(), p.getNome(), p.getCpf());
+               // System.out.printf("ID: %d | Nome: %s | CPF: %s%n", p.getId(), p.getNome(), p.getCpf());
+                System.out.printf("Nome: %s | CPF: %s%n", p.getNome(), p.getCpf());
             }
         }
     }
@@ -75,6 +77,8 @@ public class PacienteConsoleApp {
             System.out.println("Paciente cadastrado com sucesso! ID: " + paciente.getId());
         } catch (IllegalArgumentException e) {
             System.out.println("Erro no cadastro: " + e.getMessage());
+        } catch(PacienteJaCadastradoException e){
+        	 System.out.println("Erro: " + e.getMessage());
         } catch (Exception e) {
             System.out.println("Erro inesperado ao cadastrar paciente.");
             e.printStackTrace();

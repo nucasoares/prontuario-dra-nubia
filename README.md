@@ -48,6 +48,11 @@ CREATE TABLE exames (
 
 ###3. Execute o `MenuPrincipalApp`.
 
+## Para rodar com o .jar no terminal
+Dentro da pasta do projeto:
+
+ > java -cp "lib/*;prontuario.jar" prontuario.drnubia.app.MenuPrincipalApp
+
 
 
 ## Autora
