@@ -15,12 +15,12 @@ public class PacienteConsoleApp {
     public static void executar(Scanner scanner) {
         boolean running = true;
         while (running) {
-            System.out.println("\n--- Menu Pacientes ---");
-            System.out.println("1. Listar Pacientes");
-            System.out.println("2. Cadastrar Paciente");
-            System.out.println("3. Editar Paciente");
-            System.out.println("4. Deletar Paciente");
-            System.out.println("0. Voltar ao Menu Principal");
+            System.out.println("\n Menu Pacientes ");
+            System.out.println("1 - Listar Pacientes");
+            System.out.println("2 - Cadastrar Paciente");
+            System.out.println("3 - Editar Paciente");
+            System.out.println("4 - Deletar Paciente");
+            System.out.println("0 - Voltar ao Menu Principal");
             System.out.print("Escolha: ");
 
             String opcao = scanner.nextLine();
@@ -55,8 +55,8 @@ public class PacienteConsoleApp {
             System.out.println("Nenhum paciente cadastrado.");
         } else {
             for (Paciente p : lista) {
-               // System.out.printf("ID: %d | Nome: %s | CPF: %s%n", p.getId(), p.getNome(), p.getCpf());
-                System.out.printf("Nome: %s | CPF: %s%n", p.getNome(), p.getCpf());
+               System.out.printf("ID: %d | Nome: %s | CPF: %s%n", p.getId(), p.getNome(), p.getCpf());
+               // System.out.printf("Nome: %s | CPF: %s%n", p.getNome(), p.getCpf());
             }
         }
     }

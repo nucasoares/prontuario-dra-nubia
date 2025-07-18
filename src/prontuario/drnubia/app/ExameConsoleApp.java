@@ -23,12 +23,12 @@ public class ExameConsoleApp {
 
         boolean running = true;
         while (running) {
-            System.out.println("\n--- Menu Exames ---");
-            System.out.println("1. Listar Exames");
-            System.out.println("2. Cadastrar Exame");
-            System.out.println("3. Editar Exame");
-            System.out.println("4. Deletar Exame");
-            System.out.println("0. Voltar");
+            System.out.println("\n Menu Exames ");
+            System.out.println("1 - Listar Exames");
+            System.out.println("2 - Cadastrar Exame");
+            System.out.println("3 - Editar Exame");
+            System.out.println("4 - Deletar Exame");
+            System.out.println("0 - Voltar");
             System.out.print("Escolha: ");
 
             String opcao = scanner.nextLine();
@@ -63,6 +63,7 @@ public class ExameConsoleApp {
             System.out.println("Nenhum exame cadastrado.");
         } else {
             for (Exame e : exames) {
+            
                 System.out.printf("ID: %d | Descrição: %s | Data: %s | Paciente ID: %d%n",
                         e.getId(),
                         e.getDescricao(),

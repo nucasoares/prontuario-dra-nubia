@@ -66,7 +66,6 @@ public class ExameDAO implements IEntityDAO<Exame> {
 	                exame.setDescricao(rs.getString("descricao"));
 	                exame.setDataExame(rs.getTimestamp("data_exame").toLocalDateTime());
 
-	                // Preenche apenas o ID do paciente associado, pode completar o paciente depois
 	                Paciente paciente = new Paciente();
 	                paciente.setId(rs.getLong("paciente_id"));
 	                exame.setPaciente(paciente);

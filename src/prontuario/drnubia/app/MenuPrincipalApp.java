@@ -9,10 +9,10 @@ public class MenuPrincipalApp {
         int opcao;
 
         do {
-            System.out.println("\n====== MENU PRINCIPAL ======");
-            System.out.println("1. Área de Pacientes");
-            System.out.println("2. Área de Exames");
-            System.out.println("0. Sair");
+            System.out.println("\n   MENU PRINCIPAL ");
+            System.out.println("1 - Área de Pacientes");
+            System.out.println("2 - Área de Exames");
+            System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
 
             try {
